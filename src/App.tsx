@@ -1,6 +1,12 @@
-function App() {
+import Home from "./pages/Home/Home";
+import "./App.sass"
+
+
+const App = () => {
   return (
-    <h1>App</h1>
+    <div className="App">
+      <Home/>
+    </div>
   );
 }
 
