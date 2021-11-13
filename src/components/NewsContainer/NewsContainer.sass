@@ -4,15 +4,25 @@
   flex-wrap: wrap
   align-items: center
   justify-content: space-evenly
-  min-width: 100%
-  width: 100%
+  min-width: calc(100% - 280px)
+  width: calc(100% - 280px)
   // border: 3px solid grey
   .NewsConntainerRow
     display: flex
     align-items: center
     justify-content: center
     // width: 50vw
-    width: calc( 50vw - 4px )
+    width: calc(50% - 1px)
     // height: calc(100vh - 40px)
     height: 100vh
-    outline: 2px solid black
+    // border: 2px solid black
+
+@media screen and (min-width: 3000px)
+  .NewsContainer
+    .NewsConntainerRow
+      width: calc(25% - 1px)
+
+@media screen and (max-width: 1150px)
+  .NewsContainer
+    .NewsConntainerRow
+      width: calc(100% - 1px)

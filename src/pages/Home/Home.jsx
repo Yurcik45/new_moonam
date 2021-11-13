@@ -1,5 +1,6 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useEffect } from "react";
 import Header from "../../components/Header/Header";
+import Navigation from "../../components/Navigation/Navigation";
 import NewsContainer from "../../components/NewsContainer/NewsContainer";
 import "./Home.sass";
 
@@ -7,10 +8,9 @@ import "./Home.sass";
 
 const Home = () => {
 
-  // const [scrollCounter, setScrollCounter] = useState(0)
-
-
 useEffect(() => {
+
+  window.scrollTo(0, 0)
 
   const pageHeight = window.innerHeight;
   let scrollCounter = 0
@@ -39,6 +39,7 @@ useEffect(() => {
 
   return (
     <div className="Home">
+      <Navigation/>
       <Header/>
       <NewsContainer/>
     </div>

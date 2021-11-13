@@ -1,0 +1,90 @@
+
+.Navigation,
+.NavigationHeader,
+.NavigationLinks,
+.NavigationManifest,
+.NavigationItem,
+.navItemIcon,
+.navItemText
+  display: flex
+  align-items: center
+  flex-direction: column
+
+.NavigationHeader,
+.NavigationLinks,
+.NavigationManifest
+  width: 100%
+  // border: 1px solid red
+
+
+.Navigation
+  position: sticky
+  top: 0
+  height: 100vh
+  width: 280px
+  justify-content: space-between
+  color: white
+  background-color: black
+  z-index: 99
+  // border: 1px solid black
+  .NavigationHeader
+    justify-content: center
+    padding-top: 20px
+    height: 60px
+    .navHeaderMain
+      font-family: 'Press Start 2P', sans-serif
+      font-style: normal
+      font-weight: normal
+      font-size: 29px
+      padding-left: 15px
+      padding-bottom: 3px
+      line-height: 124.6%
+      /* or 37px */
+      letter-spacing: 0.255em
+    .navHeaderText
+      font-family: 'Montserrat', sans-serif
+      font-style: normal
+      font-weight: 600
+      font-size: 15px
+      line-height: 18px
+  .NavigationLinks
+    margin-bottom: 30px
+    .NavigationItem
+      height: 85px
+      flex-direction: row
+      justify-content: flex-start
+      width: 100%
+      margin: 15px 0
+      border-top-left-radius: 15px
+      border-bottom-left-radius: 15px
+      background-color: black
+      cursor: pointer
+      // border: 1px solid pink
+      &:hover
+        margin-right: 30px
+      .navItemIcon
+        justify-content: center
+        height: 100%
+        width: 100px
+        // border: 1px solid white
+      .navItemText
+        flex-direction: row
+        justify-content: start
+        height: 100%
+        width: calc(100% - 110px)
+        font-family: 'Montserrat', sans-serif
+        font-style: normal
+        font-weight: bold
+        font-size: 21px
+        line-height: 29px
+        // border: 1px solid white
+  .NavigationManifest
+    justify-content: center
+    height: 80px
+    margin-bottom: 5px
+    font-family: 'Montserrat', sans-serif
+    font-style: normal
+    font-weight: 600
+    font-size: 19px
+    line-height: 23px
+    background-color: #0602CA

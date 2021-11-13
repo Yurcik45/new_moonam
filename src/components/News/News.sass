@@ -1,11 +1,104 @@
 
-.News
+.News,
+.NewsImage,
+.NewsDirection
   display: flex
   align-items: center
-  justify-content: center  
 .News
+  justify-content: space-between
   flex-direction: column
-  width: 380px
-  height: 430px
+  margin-top: 80px
+  width: 530px
+  height: 620px
   border-radius: 29px
   // border: 1px solid black
+  .NewsImage
+    min-width: 100%
+    width: 100%
+    max-width: 100%
+    min-height: 65%
+    height: 65%
+    max-height: 65%
+    border-radius: 29px
+    overflow: hidden
+    // border: 1px solid red
+    img
+      min-width: 100px
+      width: auto
+      max-width: 100%
+      min-height: 100px
+      height: auto
+      max-height: 100%
+  .NewsTitle
+    font-family: 'Montserrat', sans-serif
+    font-weight: 800
+    font-weight: bolder
+    font-size: 33px
+    color: #000000
+    // border: 1px solid red
+  .NewsDirection
+    width: 100%
+    font-family: 'Montserrat', sans-serif
+    font-weight: 500
+    font-size: 24px
+    line-height: 124.6%
+    color: #000000
+    margin-bottom: 10px
+    // border: 1px solid red
+    .directionText, directionName
+      width: 155px
+    .underline
+      text-decoration: underline dashed 1px
+
+@media screen and ( max-width: 1600px )
+  .News
+    margin-top: 80px
+    width: 470px //
+    height: 560px //
+    .NewsTitle
+      font-size: 29px //
+    .NewsDirection
+      font-size: 20px //
+      .directionText, directionName
+        width: 130px //
+      
+@media screen and ( max-width: 1500px )
+  .News
+    width: 420px //
+    height: 520px //
+    .NewsTitle
+      font-size: 26px //
+    .NewsDirection
+      font-size: 18px //
+      .directionText, directionName
+        width: 120px //
+
+@media screen and ( max-width: 1300px )
+  .News
+    width: 350px //
+    height: 520px //
+    .NewsTitle
+      padding-bottom: 10px
+
+@media screen and ( max-width: 1150px )
+  .News
+    width: 530px //
+    height: 620px //
+    .NewsTitle
+      padding-bottom: 0
+      font-size: 33px //
+    .NewsDirection
+      font-size: 24px //
+      .directionText, directionName
+        width: 155px //
+
+@media screen and ( max-width: 1000px )
+  .News
+    width: 460px //
+    height: 560px //
+    .NewsTitle
+      font-size: 29px //
+    .NewsDirection
+      font-size: 20px //
+      .directionText, directionName
+        width: 130px //
