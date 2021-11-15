@@ -16,7 +16,7 @@ const NewsContainer = () => {
       <div className="NewsConntainerRow">
         <News/>
       </div>
-      <div className="NewsConntainerRow">
+      {/* <div className="NewsConntainerRow">
         <News/>
       </div>
       <div className="NewsConntainerRow">
@@ -39,7 +39,7 @@ const NewsContainer = () => {
       </div>
       <div className="NewsConntainerRow">
         <News/>
-      </div>
+      </div> */}
     </div>
   )
 }

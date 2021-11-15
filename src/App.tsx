@@ -6,7 +6,7 @@ import Navigation from "./components/Navigation/Navigation";
 const App = () => {
   return (
     <div className="App">
-      {/* <Navigation/> */}
+      <Navigation/>
       <Home/>
     </div>
   );

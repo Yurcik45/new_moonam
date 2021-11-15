@@ -13,13 +13,14 @@ const Header = () => {
   return (
     <div className="Header">
       <div className="header_button">
-        <div className="header_button_text underline">Зараз у Вашій стрічці 32 ЗМІ</div>
+        <div className="header_button_text underline">Зараз у Вашій стрічці 32 ЗМІ
+        </div>
       </div>
       <div className="header_button">
-        {/* <div className="header_button_text">Персоналізувати</div>
-        <div className="header_button_icon">{personalize}</div> */}
-        <div className="header_button_text">Редагувати</div>
-        <div className="header_button_icon">{edit}</div>
+        <div className="header_button_text">Персоналізувати</div>
+        <div className="header_button_icon">{personalize}</div>
+        {/* <div className="header_button_text">Редагувати</div>
+        <div className="header_button_icon">{edit}</div> */}
       </div>
     </div>
   )

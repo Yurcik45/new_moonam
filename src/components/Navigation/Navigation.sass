@@ -21,70 +21,84 @@
   position: sticky
   top: 0
   height: 100vh
-  width: 280px
+  min-width: 300px
+  width: 300px
+  max-width: 300px
   justify-content: space-between
   color: white
   background-color: black
   z-index: 99
-  // border: 1px solid black
+  // border: 1px solid red
   .NavigationHeader
-    justify-content: center
-    padding-top: 20px
-    height: 60px
+    align-items: start
+    justify-content: space-between
+    margin-top: 23px
+    height: 57px
+    // border: 1px solid white
     .navHeaderMain
+      margin-left: 40px
+      text-align: center
       font-family: 'Press Start 2P', sans-serif
       font-style: normal
       font-weight: normal
-      font-size: 29px
-      padding-left: 15px
-      padding-bottom: 3px
+      font-size: 30px
       line-height: 124.6%
       /* or 37px */
       letter-spacing: 0.255em
+      // border: 1px solid white
     .navHeaderText
+      margin-left: 40px
+      text-align: center
       font-family: 'Montserrat', sans-serif
       font-style: normal
       font-weight: 600
       font-size: 15px
       line-height: 18px
+      // border: 1px solid white
   .NavigationLinks
-    margin-bottom: 30px
+    height: 550px
+    justify-content: space-between
+    margin-bottom: 76px
+    // border: 1px solid white
     .NavigationItem
       height: 85px
       flex-direction: row
       justify-content: flex-start
       width: 100%
-      margin: 15px 0
+      // margin: 17px 0
       border-top-left-radius: 15px
       border-bottom-left-radius: 15px
       background-color: black
-      cursor: pointer
+      // cursor: pointer
       // border: 1px solid pink
       &:hover
         margin-right: 30px
+        .navItemText
+          font-size: 24px
+          line-height: 29px
       .navItemIcon
         justify-content: center
         height: 100%
-        width: 100px
+        width: 55px
+        margin-left: 22px
         // border: 1px solid white
       .navItemText
         flex-direction: row
         justify-content: start
         height: 100%
-        width: calc(100% - 110px)
+        margin-left: 17px
         font-family: 'Montserrat', sans-serif
         font-style: normal
-        font-weight: bold
+        font-weight: 700
         font-size: 21px
-        line-height: 29px
+        line-height: 26px
         // border: 1px solid white
   .NavigationManifest
     justify-content: center
     height: 80px
-    margin-bottom: 5px
     font-family: 'Montserrat', sans-serif
     font-style: normal
-    font-weight: 600
+    font-weight: 595
     font-size: 19px
     line-height: 23px
     background-color: #0602CA

@@ -7,9 +7,9 @@
 .News
   justify-content: space-between
   flex-direction: column
-  margin-top: 80px
-  width: 530px
-  height: 620px
+  margin-bottom: 100px
+  width: 550px
+  height: 700px
   border-radius: 29px
   // border: 1px solid black
   .NewsImage
@@ -30,10 +30,15 @@
       height: auto
       max-height: 100%
   .NewsTitle
+    width: 95%
+    padding-right: 5%
+    height: 160px
+    margin-top: 20px
     font-family: 'Montserrat', sans-serif
-    font-weight: 800
-    font-weight: bolder
-    font-size: 33px
+    font-style: normal;
+    font-weight: 800;
+    font-size: 31px;
+    line-height: 124.6%;
     color: #000000
     // border: 1px solid red
   .NewsDirection
@@ -43,12 +48,14 @@
     font-size: 24px
     line-height: 124.6%
     color: #000000
-    margin-bottom: 10px
+    margin-bottom: 20px
     // border: 1px solid red
     .directionText, directionName
       width: 155px
+    .directionName
+      padding-top: 4px
     .underline
-      text-decoration: underline dashed 1px
+      border-bottom: 2px dashed black
 
 @media screen and ( max-width: 1600px )
   .News

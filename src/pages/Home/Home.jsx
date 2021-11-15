@@ -8,38 +8,37 @@ import "./Home.sass";
 
 const Home = () => {
 
-useEffect(() => {
+// useEffect(() => {
 
-  window.scrollTo(0, 0)
+//   window.scrollTo(0, 0)
 
-  const pageHeight = window.innerHeight;
-  let scrollCounter = 0
+//   const pageHeight = window.innerHeight;
+//   let scrollCounter = 0
 
-  const scrollHeight = window.document.body.scrollHeight
-  document.addEventListener('wheel', function(e) {
-    if(
-      e.deltaY > 0 &&
-      scrollCounter < (scrollHeight - pageHeight)
-    ) {
-        scrollCounter = scrollCounter + pageHeight
-        window.scrollTo(0, scrollCounter)
-    }
-    if (
-      e.deltaY < 0 &&
-      scrollCounter > 0
-    ){
-        scrollCounter = scrollCounter - pageHeight
-        window.scrollTo(0, scrollCounter)
-    }
-   }
-  );
+//   const scrollHeight = window.document.body.scrollHeight
+//   document.addEventListener('wheel', function(e) {
+//     if(
+//       e.deltaY > 0 &&
+//       scrollCounter < (scrollHeight - pageHeight)
+//     ) {
+//         scrollCounter = scrollCounter + pageHeight
+//         window.scrollTo(0, scrollCounter)
+//     }
+//     if (
+//       e.deltaY < 0 &&
+//       scrollCounter > 0
+//     ){
+//         scrollCounter = scrollCounter - pageHeight
+//         window.scrollTo(0, scrollCounter)
+//     }
+//    }
+//   );
 
-}, [])
+// }, [])
 
 
   return (
     <div className="Home">
-      <Navigation/>
       <Header/>
       <NewsContainer/>
     </div>
