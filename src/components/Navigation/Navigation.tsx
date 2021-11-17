@@ -1,11 +1,20 @@
+import { useState } from "react"
 import "./Navigation.sass"
 import {
   ukraineIcon,
   worldIcon,
   economicsIcon,
   warIcon,
-  businessIcon
+  businessIcon,
+  closeIcon
 } from "./navigationIcons"
+
+interface NavProps {
+  nav: boolean
+  showNav: boolean
+  setShowNav: (value: boolean) => void
+  closeNav: any
+}
 
 const navigationItems = [
   {
@@ -35,9 +44,18 @@ const navigationItems = [
   },
 ]
 
-const Navigation = () => {
+const Navigation = (props: NavProps) => {
   return (
-    <div className="Navigation">
+    <div
+      className={props.nav ? "NavigationContainer" : "NavigationContainer none"}
+    >
+    <div className={props.showNav ? "Navigation" : "Navigation NavigationClose"}>
+      {/* <div
+        className="navclose"
+        onClick={() => props.closeNav(false)}
+      >
+        {closeIcon}
+      </div> */}
       <div className="NavigationHeader">
         <div className="navHeaderMain">moonam</div>
         <div className="navHeaderText">Усі новини країни та світу</div>
@@ -65,6 +83,7 @@ const Navigation = () => {
       <div className="NavigationManifest">
         Маніфест moonam
       </div>
+    </div>
     </div>
   )
 }

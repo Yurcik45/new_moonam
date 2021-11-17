@@ -1,12 +1,25 @@
-import { useEffect } from "react";
-import Header from "../../components/Header/Header";
-import Navigation from "../../components/Navigation/Navigation";
+// import Header from "../../components/Header/Header";
+
 import NewsContainer from "../../components/NewsContainer/NewsContainer";
 import "./Home.sass";
 
+interface HomeProps {
+  nav: boolean
+  setShowNav: (value: boolean) => void
+  closeNav: any
+}
 
+const Home = (props: HomeProps) => {
 
-const Home = () => {
+  return (
+    <div className="Home">
+
+      <NewsContainer/>
+    </div>
+  )
+}
+
+export default Home;
 
 // useEffect(() => {
 
@@ -35,14 +48,3 @@ const Home = () => {
 //   );
 
 // }, [])
-
-
-  return (
-    <div className="Home">
-      <Header/>
-      <NewsContainer/>
-    </div>
-  )
-}
-
-export default Home;

@@ -1,5 +1,5 @@
 import "./News.sass"
-import petro from "../../images/news/petro.png"
+import petro from "../../images/news/dog.png"
 const News = () => {
   return (
     <div className="News">
