@@ -14,6 +14,7 @@ interface NavProps {
   showNav: boolean
   setShowNav: (value: boolean) => void
   closeNav: any
+  categories: any
 }
 
 const navigationItems = [
@@ -65,6 +66,9 @@ const Navigation = (props: NavProps) => {
         //@ts-ignore
         navigationItems.map((item, id) => {
           return (
+          <>
+          {
+            props.categories[id].check &&
             <div
               key={id}
               className="NavigationItem"
@@ -76,6 +80,8 @@ const Navigation = (props: NavProps) => {
                 {item.name}
               </div>
             </div>
+          }
+          </>
           )
         })
       }

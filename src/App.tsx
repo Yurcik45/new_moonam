@@ -1,9 +1,5 @@
 import Home from "./pages/Home/Home";
 import "./App.sass";
-// import TestHeader from "./components/Test/TestHeader"
-// import TestNavig from "./components/Test/TestNavig"
-import Navigation from "./components/Navigation/Navigation";
-import Header from "./components/Header/Header";
 import { useEffect, useState } from "react";
 
 const App = () => {
@@ -42,27 +38,13 @@ const App = () => {
       setNav(status)
     }
   }
-  console.log("show nav", showNav);
-  console.log("nav", nav);
-  
 
   return (
     <>
     <div className="App">
-      <Navigation
-        nav={nav}
-        showNav={showNav}
-        setShowNav={setShowNav}
-        closeNav={closeNav}
-      />
-
-      <Header
-        nav={nav}
-        setShowNav={setShowNav}
-        closeNav={closeNav}
-      />
       <Home
         nav={nav}
+        showNav={showNav}
         setShowNav={setShowNav}
         closeNav={closeNav}
       />

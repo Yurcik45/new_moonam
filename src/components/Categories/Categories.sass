@@ -1,0 +1,241 @@
+.get_opacity
+  opacity: 0
+.index
+  z-index: 10
+.settings_category_container, .settings_mass_media_container
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: space-between
+  height: 800px
+  width: 700px
+  border-radius: 20px
+  overflow: hidden
+  transition: .6s
+  background-color: white
+  position: fixed
+  .category_title,
+  .category_items_block,
+  .category_button_block,
+  .category_main
+    display: flex
+    align-items: center
+    justify-content: center
+  .category_close
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    height: 30px
+    width: calc(100% - 20px)
+    margin: 15px 20px 0 15px
+    cursor: pointer
+  .category_title
+    font-size: 55px
+    font-style: normal
+    font-weight: 900
+    line-height: 69px
+    letter-spacing: 0em
+    font-size: 55px
+    font-family: 'Nunito Sans', sans-serif
+  .category_items_block
+    flex-wrap: wrap
+    justify-content: flex-start
+    width: 680px
+    height: 500px
+    overflow-y: scroll
+    .category_item
+      display: flex
+      align-items: center
+      justify-content: space-between
+      min-height: 65px
+      height: 65px
+      width: 270px
+      margin: 20px 5px
+      padding: 0 25px
+      .item_name
+        font-family: 'Nunito Sans', sans-serif
+        font-size: 27px
+        font-style: normal
+        font-weight: 400
+        line-height: 34px
+        letter-spacing: 0em
+      .item_check
+        display: flex
+        align-items: center
+        justify-content: center
+        height: 20px
+        width: 20px
+        border-radius: 5px
+        cursor: pointer
+  .category_button_block
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    width: 100%
+    .back_button,
+    .category_button
+      display: flex
+      align-items: center
+      justify-content: center
+      height: 60px
+      width: 130px
+      font-family: 'Nunito Sans', sans-serif
+      font-style: normal
+      font-weight: 600
+      line-height: 25px
+      letter-spacing: 0em
+      cursor: pointer
+    .back_button
+      font-size: 18px
+    .category_button
+      background-color: rgba(9, 111, 250, 1)
+      border-top-left-radius: 20px
+      font-size: 20px
+
+.settings_finish_container
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  height: 300px
+  width: 800px
+  border-radius: 20px
+  transition: .6s
+  background-color: white
+  .finish_title
+    display: flex
+    align-items: center
+    justify-content: space-between
+    height: 50px
+    flex-direction: row
+    font-family: 'Nunito Sans', sans-serif
+    font-size: 40px
+    font-style: normal
+    font-weight: 700
+    line-height: 50px
+    letter-spacing: 0em
+    margin-bottom: 35px
+    .title_check
+      display: flex
+      align-items: center
+      justify-content: center
+      height: 50px
+      width: 50px
+      margin-left: 50px
+      border-radius: 50%
+      background-color: rgba(9, 111, 250, 1)
+  .finish_subtitle
+    font-family: 'Nunito Sans', sans-serif
+    font-size: 22px
+    font-style: normal
+    font-weight: 400
+    line-height: 27px
+    letter-spacing: 0em
+    color:  black
+
+@media screen and (max-width: 800px)
+  .settings_category_container, .settings_mass_media_container
+    height: 600px
+    width: 500px
+    .category_close
+      height: 30px
+      width: calc(100% - 20px)
+      margin: 15px 20px 0 15px
+    .category_title
+      font-size: 55px
+      line-height: 69px
+      font-size: 40px
+    .category_items_block
+      width: 100%
+      height: 450px
+      .category_item
+        min-height: 65px
+        height: 65px
+        width: 170px
+        margin: 20px 5px
+        padding: 0 25px
+        .item_name
+          font-size: 27px
+          line-height: 34px
+        .item_check
+          height: 20px
+          min-width: 20px
+    .category_button_block
+      .category_button
+        height: 60px
+        width: 130px
+        line-height: 25px
+      .back_button
+        font-size: 18px
+      .category_button
+        font-size: 20px
+  .settings_finish_container
+    height: 200px
+    width: 550px
+    border-radius: 20px
+    .finish_title
+      height: 50px
+      font-size: 30px
+      line-height: 50px
+      margin-bottom: 25px
+      .title_check
+        height: 50px
+        width: 50px
+        margin-left: 50px
+        border-radius: 50%
+    .finish_subtitle
+      font-size: 22px
+      line-height: 27px
+@media screen and (max-width: 650px)
+  .settings_category_container, .settings_mass_media_container
+    height: 500px
+    width: 400px
+    .category_close
+      height: 30px
+      width: calc(100% - 20px)
+      margin: 15px 20px 0 15px
+    .category_title
+      line-height: 69px
+      font-size: 34px
+    .category_items_block
+      width: 100%
+      height: 400px
+      .category_item
+        min-height: 65px
+        height: 65px
+        width: 130px
+        margin: 20px 5px
+        padding: 0 25px
+        .item_name
+          font-size: 19px
+          line-height: 20px
+          width: 90px
+        .item_check
+          min-height: 15px
+          min-width: 15px
+    .category_button_block
+      .category_button
+        height: 60px
+        width: 130px
+        line-height: 25px
+      .back_button
+        font-size: 18px
+      .category_button
+        font-size: 20px
+  .settings_finish_container
+    height: 180px
+    width: 400px
+    border-radius: 20px
+    .finish_title
+      height: 40px
+      font-size: 22px
+      line-height: 30px
+      margin-bottom: 20px
+      .title_check
+        height: 40px
+        width: 40px
+        margin-left: 20px
+        border-radius: 50%
+    .finish_subtitle
+      font-size: 17px
+      line-height: 18px

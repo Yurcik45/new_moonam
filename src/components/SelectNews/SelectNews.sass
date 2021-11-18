@@ -1,0 +1,315 @@
+.SelectNews,
+.select_header,
+.header_close
+  display: flex
+  align-items: center
+  justify-content: center
+
+
+.SelectNews
+  flex-direction: column
+  width: 965px
+  height: 780px
+  justify-content: flex-start
+  overflow: hidden
+  border-radius: 30px
+  background-color: white
+  .select_header_container
+    display: flex
+    flex-direction: row-reverse
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+    width: 100%
+    height: 260px
+    .header_close
+      position: absolute
+      align-items: flex-end
+      justify-content: flex-start
+      width: 35px
+      height: 35px
+      cursor: pointer
+      svg
+        width: 25px
+        height: 25px
+    .select_header
+      align-items: flex-start
+      justify-content: space-between
+      flex-direction: column
+      padding: 20px 40px 20px 20px
+      width: calc(100% - 60px)
+      height: calc(100% - 40px)
+      background-color: rgba(0,0,0, .7)
+      .header_title
+        font-family: 'Montserrat', sans-serif
+        font-style: normal
+        font-weight: 800
+        font-size: 40px
+        line-height: 124.6%
+        color: #FFFFFF
+      .header_source
+        display: flex
+        flex-direction: row
+        width: 100%
+        font-family: 'Montserrat', sans-serif
+        font-style: normal
+        font-weight: 500
+        font-size: 22px
+        line-height: 124.6%
+        color: #ABABAB
+        .source_link
+          color: #0602ca
+          padding-left: 10px
+  .select_main, .select_quation
+    min-height: 50px
+    font-family: 'Montserrat', sans-serif
+    font-style: normal
+    font-weight: normal
+    font-size: 20px
+    line-height: 124.6%
+    color: #000000
+  .select_main
+    width: calc(100% - 130px)
+    margin: 50px 50px
+    padding: 15px
+    height: 170px
+    overflow-y: scroll
+    // border: 1px solid black
+  .select_quation
+    display: flex
+    flex-direction: row
+    width: calc(100% - 100px)
+    margin: 0 50px 50px 50px
+    height: 190px
+    // border: 1px solid black
+    .quation_decor_line
+      height: 100%
+      border: 2px solid black
+      min-width: 1px
+      width: 1px
+      max-width: 1px
+      background-color: black
+      margin-right: 20px
+    .quation_text
+      padding: 15px 0
+      height: 90%
+
+@media screen and (max-width: 1100px)
+  .SelectNews
+    width: 850px //
+    height: 780px
+    .select_header_container
+      width: 100%
+      height: 260px
+      .select_header
+        padding: 20px 40px 20px 20px
+        width: calc(100% - 60px)
+        height: calc(100% - 40px)
+        .header_title
+          font-size: 38px
+        .header_source
+          font-size: 22px
+          .source_link
+            padding-left: 10px
+    .select_main, .select_quation
+      font-size: 19px
+    .select_main
+      width: calc(100% - 110px)
+      margin: 40px 40px
+      padding: 15px
+      height: 170px
+    .select_quation
+      width: calc(100% - 80px)
+      margin: 0 40px 40px 40px
+      height: 190px
+      .quation_decor_line
+        border: 2px solid black
+        width: 1px
+        margin-right: 20px
+      .quation_text
+        padding: 15px 0
+
+
+@media screen and (max-width: 1000px)
+  .SelectNews
+    width: 750px //
+    height: 720px
+    .select_header_container
+      width: 100%
+      height: 260px
+      .select_header
+        padding: 20px 40px 20px 20px
+        width: calc(100% - 60px)
+        height: calc(100% - 40px)
+        .header_title
+          font-size: 35px
+        .header_source
+          font-size: 22px
+          .source_link
+            padding-left: 10px
+    .select_main, .select_quation
+      font-size: 18px //
+    .select_main
+      width: calc(100% - 90px)
+      margin: 30px 30px
+      padding: 15px
+      height: 170px
+    .select_quation
+      width: calc(100% - 60px)
+      margin: 0 30px 30px 30px
+      height: 190px
+      .quation_decor_line
+        border: 2px solid black
+        width: 1px
+        margin-right: 20px
+      .quation_text
+        padding: 15px 0
+
+@media screen and (max-width: 900px)
+  .SelectNews
+    width: 650px //
+    height: 720px
+    .select_header_container
+      width: 100%
+      height: 260px
+      .header_close
+        width: 30px
+        height: 30px
+        svg
+          width: 20px
+          height: 20px
+      .select_header
+        padding: 20px 40px 20px 20px
+        width: calc(100% - 60px)
+        height: calc(100% - 40px)
+        .header_title
+          font-size: 33px
+        .header_source
+          font-size: 22px
+          .source_link
+            padding-left: 10px
+    .select_main, .select_quation
+      font-size: 17px //
+    .select_main
+      width: calc(100% - 70px)
+      margin: 20px 20px
+      padding: 15px
+      height: 170px
+    .select_quation
+      width: calc(100% - 40px)
+      margin: 0 20px 20px 20px
+      height: 190px
+      .quation_decor_line
+        border: 2px solid black
+        width: 1px
+        margin-right: 20px
+      .quation_text
+        padding: 15px 0
+
+@media screen and (max-width: 800px)
+  .SelectNews
+    width: 500px //
+    height: 650px
+    .select_header_container
+      width: 100%
+      height: 220px
+      .select_header
+        padding: 20px 40px 20px 20px
+        width: calc(100% - 60px)
+        height: calc(100% - 40px)
+        .header_title
+          font-size: 28px
+        .header_source
+          font-size: 16px
+          .source_link
+            padding-left: 10px
+    .select_main, .select_quation
+      font-size: 15px //
+    .select_main
+      width: calc(100% - 70px)
+      margin: 20px 20px
+      padding: 15px
+      height: 170px
+    .select_quation
+      width: calc(100% - 40px)
+      margin: 0 20px 20px 20px
+      height: 190px
+      .quation_decor_line
+        border: 2px solid black
+        width: 1px
+        margin-right: 20px
+      .quation_text
+        padding: 15px 0
+
+@media screen and (max-width: 600px)
+  .SelectNews
+    width: 400px //
+    height: 560px
+    .select_header_container
+      width: 100%
+      height: 190px
+      .select_header
+        padding: 15px 30px 15px 15px
+        width: calc(100% - 45px)
+        height: calc(100% - 30px)
+        .header_title
+          font-size: 21px
+        .header_source
+          font-size: 12px
+          .source_link
+            padding-left: 10px
+    .select_main, .select_quation
+      font-size: 12px //
+    .select_main
+      width: calc(100% - 70px)
+      margin: 20px 20px
+      padding: 15px
+      height: 170px
+    .select_quation
+      width: calc(100% - 40px)
+      margin: 0 20px 20px 20px
+      height: 190px
+      .quation_decor_line
+        border: 1px solid black
+        width: 1px
+        margin-right: 20px
+      .quation_text
+        padding: 15px 0
+
+
+@media screen and (max-width: 500px)
+  .SelectNews
+    width: 300px //
+    height: 510px
+    .select_header_container
+      width: 100%
+      height: 160px
+      .select_header
+        padding: 15px 30px 15px 15px
+        width: calc(100% - 45px)
+        height: calc(100% - 30px)
+        .header_title
+          font-size: 16px
+        .header_source
+          font-size: 9px
+          .source_link
+            padding-left: 10px
+    .select_main, .select_quation
+      font-size: 10px //
+    .select_main
+      width: calc(100% - 50px)
+      margin: 10px 10px
+      padding: 15px
+      height: 170px
+    .select_quation
+      width: calc(100% - 40px)
+      margin: 0 10px 10px 20px
+      height: 200px
+      .quation_decor_line
+        border: 1px solid black
+        width: 1px
+        margin-right: 10px
+        height: 90%
+      .quation_text
+        padding: 15px 0
+  

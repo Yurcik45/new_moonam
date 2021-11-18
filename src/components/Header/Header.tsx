@@ -5,6 +5,8 @@ interface HeaderProps {
   nav: boolean
   setShowNav: (value: boolean) => void
   closeNav:any
+  setShowModal: any
+  setModalType: any
 }
 
 const personalize = <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -15,8 +17,12 @@ const edit = <svg width="20" height="20" viewBox="0 0 22 22" fill="none" xmlns="
 <path d="M0 17.4173V22H4.5827L18.0986 8.4841L13.5159 3.9014L0 17.4173ZM21.6425 4.94015C22.1192 4.46355 22.1192 3.69365 21.6425 3.21705L18.7829 0.35745C18.3063 -0.11915 17.5365 -0.11915 17.0599 0.35745L14.8235 2.59381L19.4062 7.1765L21.6425 4.94015Z" fill="black"/>
 </svg>
 
-
 const Header = (props: HeaderProps) => {
+
+  const openModal = () => {
+    props.setShowModal(true)
+    props.setModalType("categories")
+  }
 
   return (
     <div
@@ -27,11 +33,14 @@ const Header = (props: HeaderProps) => {
         <div className="header_button_text underline">Зараз у Вашій стрічці 32 ЗМІ
         </div>
       </div>
-        <div className="header_button">
-        <div className="header_button_text">Персоналізувати</div>
-        <div className="header_button_icon">{personalize}</div>
-        {/* <div className="header_button_text">Редагувати</div>
-        <div className="header_button_icon">{edit}</div> */}
+        <div
+          className="header_button"
+          onClick={openModal}
+        >
+          <div className="header_button_text">Персоналізувати</div>
+          <div className="header_button_icon">{personalize}</div>
+          {/* <div className="header_button_text">Редагувати</div>
+          <div className="header_button_icon">{edit}</div> */}
       </div>
       </div>
       
