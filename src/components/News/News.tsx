@@ -1,5 +1,4 @@
 import "./News.sass"
-import petro from "../../images/news/dog.png"
 
 interface NewsProps {
   setModalType: any
@@ -46,7 +45,7 @@ const News = (props: NewsProps) => {
       <div className="NewsDirection">
         <div className="directionText">Новина від:</div>
         <div className="directionName underline">
-          {props.newsData.source}
+          {props.newsData.chanel}
         </div>
       </div>
     </div>

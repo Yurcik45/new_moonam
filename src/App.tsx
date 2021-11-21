@@ -40,7 +40,6 @@ const App = () => {
   }
 
   return (
-    <>
     <div className="App">
       <Home
         nav={nav}
@@ -49,7 +48,6 @@ const App = () => {
         closeNav={closeNav}
       />
     </div>
-    </>
   );
 }
 

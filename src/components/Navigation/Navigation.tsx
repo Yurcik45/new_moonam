@@ -1,4 +1,3 @@
-import { useState } from "react"
 import "./Navigation.sass"
 import {
   ukraineIcon,
@@ -6,7 +5,6 @@ import {
   economicsIcon,
   warIcon,
   businessIcon,
-  closeIcon
 } from "./navigationIcons"
 
 interface NavProps {
@@ -66,8 +64,6 @@ const Navigation = (props: NavProps) => {
         //@ts-ignore
         navigationItems.map((item, id) => {
           return (
-          <>
-          {
             props.categories[id].check &&
             <div
               key={id}
@@ -80,8 +76,6 @@ const Navigation = (props: NavProps) => {
                 {item.name}
               </div>
             </div>
-          }
-          </>
           )
         })
       }

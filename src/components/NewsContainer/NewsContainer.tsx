@@ -1,8 +1,5 @@
 import News from "../News/News";
 import "./NewsContainer.sass";
-import dog from "../../images/news/dog.png"
-import petro from "../../images/news/petro.png"
-import { useState } from "react";
 
 interface NewsContainerProps {
   setModalType: any

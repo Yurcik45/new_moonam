@@ -1,5 +1,5 @@
 import "./Header.sass";
-import { burgerIcon, closeIcon, closeIcon2 } from "../Navigation/navigationIcons";
+import { burgerIcon, closeIcon2 } from "../Navigation/navigationIcons";
 
 interface HeaderProps {
   nav: boolean
@@ -7,6 +7,7 @@ interface HeaderProps {
   closeNav:any
   setShowModal: any
   setModalType: any
+  personalaze: boolean
 }
 
 const personalize = <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -18,6 +19,7 @@ const edit = <svg width="20" height="20" viewBox="0 0 22 22" fill="none" xmlns="
 </svg>
 
 const Header = (props: HeaderProps) => {
+
 
   const openModal = () => {
     props.setShowModal(true)
@@ -37,10 +39,20 @@ const Header = (props: HeaderProps) => {
           className="header_button"
           onClick={openModal}
         >
-          <div className="header_button_text">Персоналізувати</div>
-          <div className="header_button_icon">{personalize}</div>
-          {/* <div className="header_button_text">Редагувати</div>
-          <div className="header_button_icon">{edit}</div> */}
+          {
+            props.personalaze ?
+            <>
+            <div className="header_button_text">Персоналізувати</div>
+            <div className="header_button_icon">{personalize}</div>
+            </>
+            :
+            <>
+            <div className="header_button_text">Редагувати</div>
+            <div className="header_button_icon">{edit}</div>
+            </>
+          }
+          
+          
       </div>
       </div>
       

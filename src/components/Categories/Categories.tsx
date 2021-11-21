@@ -175,8 +175,6 @@ const Categories = (props: CategoriesProps) => {
               
             //@ts-ignore
             props.chanels.map((item, id: number) => {
-              console.log("chanels map", item);
-              
               return (
                 <div
                   className="category_item"
@@ -218,7 +216,7 @@ const Categories = (props: CategoriesProps) => {
         onClickAway={
           showFinish
           ? () => clickClose()
-          : () => console.log("fff")
+          : () => console.log()
         }
       >
         <div

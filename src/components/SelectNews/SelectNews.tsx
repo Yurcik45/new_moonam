@@ -18,7 +18,7 @@ const SelectNews = (props: SelectNewsProps) => {
     image,
     title,
     source,
-    date,
+    // date,
     text,
     quotation
   } = props.newsPopup
