@@ -1,23 +1,8 @@
 import "./Categories.sass"
 import ClickAwayListener from "@material-ui/core/ClickAwayListener"
 import { useState, useReducer } from "react";
+import { CategoriesProps } from "../../types";
 // import checkIcon from "../../images/modal/check.webp"
-
-interface CategoriesProps {
-  categories: {
-    [id: number]: {
-        name: string
-        check: boolean
-    }
-  }
-  chanels: {
-    [id: number]: {
-        name: string
-        check: boolean
-    }
-  }
-  setShowModal: any
-}
 
 const Categories = (props: CategoriesProps) => {
 
@@ -116,7 +101,7 @@ const Categories = (props: CategoriesProps) => {
         <div className="category_items_block">
           {
             //@ts-ignore
-            props.categories.map((item: any, id: number) => {
+            props.categories.map((item: {name: string, check: boolean}, id: number) => {
               return (
                 <div                                        className="category_item"
                     onClick={() => categoryHandler(id, item.check)}
@@ -174,7 +159,7 @@ const Categories = (props: CategoriesProps) => {
             props.chanels &&
               
             //@ts-ignore
-            props.chanels.map((item, id: number) => {
+            props.chanels.map((item: {name: string, check: boolean}, id: number) => {
               return (
                 <div
                   className="category_item"

@@ -1,25 +1,7 @@
 import "./Modal.sass"
 import Categories from "../Categories/Categories";
 import SelectNews from "../SelectNews/SelectNews";
-
-interface ModalProps {
-  type: string
-  categories: {
-    [id: number]: {
-        name: string
-        check: boolean
-    }
-  }
-  chanels: {
-    [id: number]: {
-        name: string
-        check: boolean
-    }
-  }
-  setShowModal: any
-  newsPopup: any
-  setNewsPopup: any
-}
+import { ModalProps } from "../../types";
 
 const Modal = (props: ModalProps) => {
   return (

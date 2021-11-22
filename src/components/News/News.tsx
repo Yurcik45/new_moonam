@@ -1,14 +1,5 @@
 import "./News.sass"
-
-interface NewsProps {
-  setModalType: any
-  setShowModal: any
-  setNewsPopup: any
-  newsPopup: any
-  openNews: any
-  newsData: any
-  setNewsData: any
-}
+import { NewsProps } from "../../types"
 
 const News = (props: NewsProps) => {
 
@@ -20,7 +11,7 @@ const News = (props: NewsProps) => {
       date,
       text,
       quotation
-    } = props.newsData
+    } = props.newsDataItem
     props.openNews(
       image,
       title,
@@ -37,15 +28,15 @@ const News = (props: NewsProps) => {
       onClick={openNews}
     >
       <div className="NewsImage">
-        <img src={props.newsData.image} alt="petro" />
+        <img src={props.newsDataItem.image} alt="petro" />
       </div>
       <div className="NewsTitle">
-        {props.newsData.title}
+        {props.newsDataItem.title}
       </div>
       <div className="NewsDirection">
         <div className="directionText">Новина від:</div>
         <div className="directionName underline">
-          {props.newsData.chanel}
+          {props.newsDataItem.chanel}
         </div>
       </div>
     </div>

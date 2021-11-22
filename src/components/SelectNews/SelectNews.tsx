@@ -1,10 +1,6 @@
 import "./SelectNews.sass"
 import { ClickAwayListener } from "@material-ui/core";
-
-interface SelectNewsProps {
-  setShowModal: any
-  newsPopup: any
-}
+import { SelectNewsProps } from "../../types";
 
 const SelectNews = (props: SelectNewsProps) => {
   const closeModal = () => {

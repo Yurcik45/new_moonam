@@ -6,16 +6,12 @@ import {
   warIcon,
   businessIcon,
 } from "./navigationIcons"
+import {
+  NavigationProps,
+  NavigationItems
+} from "../../types"
 
-interface NavProps {
-  nav: boolean
-  showNav: boolean
-  setShowNav: (value: boolean) => void
-  closeNav: any
-  categories: any
-}
-
-const navigationItems = [
+const navigationItems: NavigationItems[] = [
   {
     name: "Україна",
     icon: ukraineIcon,
@@ -43,18 +39,12 @@ const navigationItems = [
   },
 ]
 
-const Navigation = (props: NavProps) => {
+const Navigation = (props: NavigationProps) => {
   return (
     <div
       className={props.nav ? "NavigationContainer" : "NavigationContainer none"}
     >
     <div className={props.showNav ? "Navigation" : "Navigation NavigationClose"}>
-      {/* <div
-        className="navclose"
-        onClick={() => props.closeNav(false)}
-      >
-        {closeIcon}
-      </div> */}
       <div className="NavigationHeader">
         <div className="navHeaderMain">moonam</div>
         <div className="navHeaderText">Усі новини країни та світу</div>
@@ -62,7 +52,7 @@ const Navigation = (props: NavProps) => {
       <div className="NavigationLinks">
       {
         //@ts-ignore
-        navigationItems.map((item, id) => {
+        navigationItems.map((item: {name: string, icon: any, check: boolean}, id: number) => {
           return (
             props.categories[id].check &&
             <div

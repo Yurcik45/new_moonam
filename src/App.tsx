@@ -6,6 +6,7 @@ const App = () => {
   const [showNav, setShowNav] = useState<boolean>(false)
 
   const [nav, setNav] = useState<boolean>(false)
+
   useEffect(() => {
     if (window.innerWidth - 15 > 1000) {
       setNav(true)
@@ -14,7 +15,7 @@ const App = () => {
       setNav(false)
       setShowNav(false)
     }
-    window.onresize = () => {
+    window.onresize = (): void => {
       if (window.innerWidth - 15 > 1000) {
         setNav(true)
         setShowNav(true)
@@ -24,7 +25,8 @@ const App = () => {
       }
     }
   }, [])
-  const closeNav = (status: boolean) => {
+
+  const closeNav = (status: boolean): void => {
     if (!status) {
       setTimeout(() => {
         setNav(status)
@@ -50,5 +52,6 @@ const App = () => {
     </div>
   );
 }
-
+// 1200 925h !!!
+// 1424 925h !!!
 export default App;

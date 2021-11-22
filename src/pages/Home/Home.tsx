@@ -5,26 +5,11 @@ import Navigation from "../../components/Navigation/Navigation";
 import NewsContainer from "../../components/NewsContainer/NewsContainer";
 import "./Home.sass";
 import dog from "../../images/news/dog.png"
-
-interface HomeProps {
-  nav: boolean
-  showNav: boolean
-  setShowNav: (value: boolean) => void
-  closeNav: any
-}
-interface Сategories {
-  name: string
-  check: boolean
-}
-
-export interface NewsPopupDataTypes {
-  image: string
-  title: string
-  date: string
-  text: string
-  source: string
-  quotation: string
-}
+import {
+  NewsPopupDataTypes,
+  Сategories,
+  HomeProps
+} from "../../types"
 
 const Home = (props: HomeProps) => {
 
@@ -201,15 +186,12 @@ const Home = (props: HomeProps) => {
       <Navigation
         nav={props.nav}
         showNav={props.showNav}
-        setShowNav={props.setShowNav}
-        closeNav={props.closeNav}
         categories={categories}
       />
 
       <Header
         setShowModal={setShowModal}
         nav={props.nav}
-        setShowNav={props.setShowNav}
         closeNav={props.closeNav}
         setModalType={setModalType}
         personalaze={personalaze}
@@ -227,7 +209,6 @@ const Home = (props: HomeProps) => {
         showModal &&
           <Modal
             newsPopup={newsPopup}
-            setNewsPopup={setNewsPopup}
             categories={categories}
             chanels={chanels}
             type={modalType} // categories or news

@@ -1,14 +1,7 @@
 import News from "../News/News";
 import "./NewsContainer.sass";
+import { NewsContainerProps } from "../../types";
 
-interface NewsContainerProps {
-  setModalType: any
-  setShowModal: any
-  setNewsPopup: any
-  newsPopup: any
-  newsData: any
-  setNewsData: any
-}
 
 const NewsContainer = (props: NewsContainerProps) => {
 
@@ -40,13 +33,8 @@ const NewsContainer = (props: NewsContainerProps) => {
           return (
             <div key={id} className="NewsConntainerRow">
               <News
-                newsData={item}
-                setNewsData={props.setNewsData}
+                newsDataItem={item}
                 openNews={openNews}
-                newsPopup={props.newsPopup}
-                setNewsPopup={props.setNewsPopup}
-                setModalType={props.setModalType}
-                setShowModal={props.setShowModal}
               />
             </div>
           )
