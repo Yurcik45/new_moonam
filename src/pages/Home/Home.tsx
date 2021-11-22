@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useReducer } from "react";
 import Modal from "../../components/Modal/Modal";
 import Header from "../../components/Header/Header";
 import Navigation from "../../components/Navigation/Navigation";
@@ -16,6 +16,7 @@ const Home = (props: HomeProps) => {
   const [showModal, setShowModal] = useState<boolean>(false)
   const [modalType, setModalType] = useState<string>("")
   const [personalaze, setPersonalaze] = useState(true)
+  const [, forceUpdate] = useReducer(x => x + 1, 0)
 
 
   const [categories, setCategories] = useState<Сategories[]>([
@@ -179,6 +180,7 @@ const Home = (props: HomeProps) => {
       setChanels(storageChanels)
     }
     different()
+    forceUpdate()
   }, [])
 
   return (
